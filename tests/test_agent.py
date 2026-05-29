@@ -44,7 +44,7 @@ class TestParametrizado:
             ("Quanto é 6 vezes 6?", "36"),
             ("Quanto é 9 vezes 9?", "81"),
             ("Quanto é 7 x 7?", "49"),
-            ("Qual a raiz de 445", "22"),
+            ("Qual a raiz de 445", "21"),
         ],
     )
     def test_calculos_basicos(self, agent, pergunta, resultado_esperado):
