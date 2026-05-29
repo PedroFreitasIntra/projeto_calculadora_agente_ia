@@ -24,11 +24,18 @@ from openai import OpenAI
 
 load_dotenv()
 
-# Usamos OpenRouter também como juiz
-client = OpenAI(
-    api_key=os.environ.get("OPENROUTER_API_KEY"),
-    base_url="https://openrouter.ai/api/v1",
-)
+# Usamos OpenRouter também como juiz (lazy load)
+_client = None
+
+def get_client():
+    """Lazy load do cliente OpenAI — só inicializa quando precisa."""
+    global _client
+    if _client is None:
+        _client = OpenAI(
+            api_key=os.environ.get("OPENROUTER_API_KEY"),
+            base_url="https://openrouter.ai/api/v1",
+        )
+    return _client
 
 JUDGE_MODEL = "openai/gpt-oss-120b:free"
 
@@ -49,7 +56,7 @@ def llm_judge(question: str, answer: str, criterion: str) -> dict:
 
     Retorna: {"pass": bool, "reason": str}
     """
-    response = client.chat.completions.create(
+    response = get_client().chat.completions.create(
         model=JUDGE_MODEL,
         max_tokens=256,
         messages=[
