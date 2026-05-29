@@ -17,7 +17,6 @@ import json
 import hashlib
 from pathlib import Path
 import pytest
-import sys
 from pathlib import Path
 from agent import ask_agent
 

@@ -12,11 +12,18 @@ from openai import OpenAI
 
 load_dotenv()
 
-# OpenRouter usa a API compatível com OpenAI
-client = OpenAI(
-    api_key=os.environ.get("OPENROUTER_API_KEY"),
-    base_url="https://openrouter.ai/api/v1",
-)
+# OpenRouter usa a API compatível com OpenAI (lazy load)
+_client = None
+
+def get_client():
+    """Lazy load do cliente OpenAI — só inicializa quando precisa."""
+    global _client
+    if _client is None:
+        _client = OpenAI(
+            api_key=os.environ.get("OPENROUTER_API_KEY"),
+            base_url="https://openrouter.ai/api/v1",
+        )
+    return _client
 
 # Modelos disponíveis (escolha um):
 # - "meta-llama/llama-3.3-70b-instruct:free"     -> GRÁTIS, suporta tools
@@ -75,7 +82,7 @@ def ask_agent(question: str, model: str = MODEL) -> dict:
     tool_calls_made = []
 
     while True:
-        response = client.chat.completions.create(
+        response = get_client().chat.completions.create(
             model=model,
             max_tokens=1024,
             messages=messages,
