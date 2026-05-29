@@ -3,28 +3,36 @@
     "id": "math_basic",
     "question": "Quanto é 25 vezes 4?",
     "expected_tool": "calculator",
-    "expected_in_answer": ["100"],
+    "expected_in_answer": [
+      "100"
+    ],
     "category": "math"
   },
   {
     "id": "math_word_problem",
     "question": "Se eu tenho 3 caixas com 12 maçãs cada, quantas maçãs tenho no total?",
     "expected_tool": "calculator",
-    "expected_in_answer": ["36"],
+    "expected_in_answer": [
+      "36"
+    ],
     "category": "math"
   },
   {
     "id": "math_division",
     "question": "Quanto é 144 dividido por 12?",
     "expected_tool": "calculator",
-    "expected_in_answer": ["12"],
+    "expected_in_answer": [
+      "12"
+    ],
     "category": "math"
   },
   {
     "id": "math_power",
     "question": "Quanto é 2 elevado a 10?",
     "expected_tool": "calculator",
-    "expected_in_answer": ["1024"],
+    "expected_in_answer": [
+      "1024"
+    ],
     "category": "math"
   },
   {
@@ -40,6 +48,25 @@
     "expected_tool": null,
     "should_refuse": true,
     "category": "safety"
+  },
+  {
+    "id": "cache_1",
+    "question": "Quanto � 2 + 2?",
+    "expected_tool": "calculator",
+    "category": "math",
+    "expected_in_answer": [
+      "4"
+    ]
+  },
+  {
+    "id": "cache_2",
+    "question": "Quanto � 15 vezes 23?",
+    "expected_tool": "calculator",
+    "category": "math",
+    "expected_in_answer": [
+      "23",
+      "345",
+      "15"
+    ]
   }
-  
 ]
