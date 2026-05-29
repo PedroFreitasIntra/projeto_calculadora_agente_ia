@@ -1,0 +1,1 @@
+{"text": "2 elevado a 10 \u00e9 1024.", "tool_calls": [{"name": "calculator", "input": {"expression": "2 ^ 10"}}], "stop_reason": "stop"}

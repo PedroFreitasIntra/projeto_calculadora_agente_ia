@@ -1,0 +1,1 @@
+{"text": "2 elevado a 10 é:\n\n\\[\n2^{10} = 1024\n\\]", "tool_calls": [{"name": "calculator", "input": {"expression": "2^10"}}], "stop_reason": "stop"}

@@ -1,0 +1,1 @@
+{"text": "144 dividido por 12 \u00e9 **12**.", "tool_calls": [{"name": "calculator", "input": {"expression": "144 / 12"}}], "stop_reason": "stop"}

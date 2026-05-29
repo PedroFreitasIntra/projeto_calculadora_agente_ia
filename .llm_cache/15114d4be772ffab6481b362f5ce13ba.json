@@ -1,0 +1,1 @@
+{"text": "A raiz quadrada de **445** \u00e9 aproximadamente **21,0950** (arredondado para quatro casas decimais).", "tool_calls": [{"name": "calculator", "input": {"expression": "sqrt(445)"}}, {"name": "calculator", "input": {"expression": "445**0.5"}}], "stop_reason": "stop"}

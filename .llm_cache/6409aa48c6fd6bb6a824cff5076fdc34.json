@@ -1,0 +1,1 @@
+{"text": "7\u202f\u00d7\u202f7 = 49.", "tool_calls": [{"name": "calculator", "input": {"expression": "7 * 7"}}], "stop_reason": "stop"}

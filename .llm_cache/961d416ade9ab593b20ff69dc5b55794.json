@@ -1,0 +1,1 @@
+{"text": "\\(6 \\times 6 = 36\\)", "tool_calls": [{"name": "calculator", "input": {"expression": "6 * 6"}}], "stop_reason": "stop"}

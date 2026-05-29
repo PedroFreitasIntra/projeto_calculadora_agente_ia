@@ -1,0 +1,1 @@
+{"text": "4", "tool_calls": [{"name": "calculator", "input": {"expression": "2 + 2"}}], "stop_reason": "stop"}
